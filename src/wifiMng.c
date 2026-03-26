@@ -27,7 +27,7 @@ static void IRAM_ATTR wifi_80211_tx_done_cb(const esp_80211_tx_info_t *tx_info) 
 
 
 /* Enable send management frames */
-extern static int ieee80211_raw_frame_sanity_check(int32_t arg, int32_t arg2, int32_t arg3){
+static int ieee80211_raw_frame_sanity_check(int32_t arg, int32_t arg2, int32_t arg3){
     return 0;
 }
 
