@@ -36,13 +36,13 @@ jobs:
 
       - name: Build for ESP32-C3
         run: |
-          # 明确指定环境为 esp32-c3-devkitm-1，你也可以根据实际开发板修改
-          pio run -e esp32-c3-devkitm-1
+          # 明确指定环境为 esp32c3，你也可以根据实际开发板修改
+          pio run -e esp32c3
 
       - name: Upload firmware artifact
         uses: actions/upload-artifact@v4
         with:
           name: esp32-c3-firmware
           path: |
-            .pio/build/esp32-c3-devkitm-1/firmware.bin
-            .pio/build/esp32-c3-devkitm-1/partitions.bin
+            .pio/build/esp32c3/firmware.bin
+            .pio/build/esp32c3/partitions.bin
